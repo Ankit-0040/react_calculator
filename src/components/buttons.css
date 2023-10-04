@@ -10,11 +10,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
-  .input {
+  .input-textbox {
     width: 100%;
-  padding: 12px 20px;
-  /* margin: 8px 0; */
-  /* box-sizing: border-box; */
+  padding: 8px 10px; 
+  margin: 8px 0; 
+   box-sizing: border-box; 
   }
   .buttons {
     display: grid;

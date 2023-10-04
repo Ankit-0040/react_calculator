@@ -3,23 +3,21 @@ import './buttons.css'
 export default function Buttons() {
   const[value,setValue] = useState('');
   const handleButtonClick = (newValue) => {
-    // Append the clicked button's value to the current input value
     setValue((prevValue) => prevValue + newValue);
   };
 
   const handleBackspaceClick = () => {
-    // Remove the last character from the current input value
     setValue((prevValue) => prevValue.slice(0, -1));
   };
+  const handleClearAll =() =>{
+    setValue('')
+  }
 
   const handleEvaluateClick = () => {
     try {
-      // Use the eval function to evaluate the expression
       const result = eval(value);
-      // Set the result as the new input value
       setValue(result.toString());
     } catch (error) {
-      // Handle any evaluation errors (e.g., syntax error)
       setValue('Error');
     }
   };
@@ -27,7 +25,7 @@ export default function Buttons() {
     <>
     <div className='calculator'>
       <div className='input'>
-        <input type='text' placeholder='0' value={value} readOnly ></input>
+        <input type='text' placeholder='0' className='input-textbox' value={value} readOnly ></input>
       </div>
     <div className='buttons'>
     <button type='button' onClick={() => handleButtonClick('+')}>+</button>
@@ -45,7 +43,10 @@ export default function Buttons() {
     <button type="button" onClick={()=> handleButtonClick('1')}>1</button>
     <button type="button" onClick={()=> handleButtonClick('0')}>0</button>
     <button type='button' onClick={() => handleBackspaceClick()}>&larr;</button>
+    <button type='button' onClick={() => handleBackspaceClick()}>.</button>
+    <button type="button" onClick={() => handleClearAll()}>C</button>
     <button type="button" onClick={() => handleEvaluateClick()}>=</button>
+    
     </div>
     </div>
     </>
