@@ -1,10 +1,11 @@
 import './App.css';
-import Buttons from './components/buttons';
-
+import Calculator from './components/calculator';
+import ToDo from './components/to_do';
 function App() {
   return (
     <div className="App">
-     <Buttons/>
+     <Calculator/>
+      <ToDo/>
     </div>
     
   );

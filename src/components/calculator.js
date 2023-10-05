@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './buttons.css'
-export default function Buttons() {
+export default function Calculator() {
   const[value,setValue] = useState('');
   const handleButtonClick = (newValue) => {
     setValue((prevValue) => prevValue + newValue);
@@ -16,6 +16,7 @@ export default function Buttons() {
   const handleEvaluateClick = () => {
     try {
       const result = eval(value);
+      console.log(result);
       setValue(result.toString());
     } catch (error) {
       setValue('Error');
