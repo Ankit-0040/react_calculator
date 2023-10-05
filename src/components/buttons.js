@@ -43,7 +43,7 @@ export default function Buttons() {
     <button type="button" onClick={()=> handleButtonClick('1')}>1</button>
     <button type="button" onClick={()=> handleButtonClick('0')}>0</button>
     <button type='button' onClick={() => handleBackspaceClick()}>&larr;</button>
-    <button type='button' onClick={() => handleBackspaceClick()}>.</button>
+    <button type='button' onClick={() => handleButtonClick('.')}>.</button>
     <button type="button" onClick={() => handleClearAll()}>C</button>
     <button type="button" onClick={() => handleEvaluateClick()}>=</button>
     
