@@ -1,0 +1,21 @@
+.to-do{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.input_box_add_button{
+    display: flex;
+    align-items: center;
+     justify-content: center;
+}
+
+.input-textbox{
+    width: 30%;
+   padding: 8px 10px; 
+   margin-right: 10px; 
+}
+.button{
+    width: max-content;
+}
